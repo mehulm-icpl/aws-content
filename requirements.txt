@@ -1,0 +1,5 @@
+strands-agents 
+strands-agents-tools 
+boto3 
+bedrock-agentcore
+awslabs.aws-documentation-mcp-server==1.1.28

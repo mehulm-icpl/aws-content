@@ -1,0 +1,92 @@
+:root {
+  --bg-1: #0a1024;
+  --bg-2: #111d36;
+  --panel: rgba(13, 18, 35, 0.72);
+  --line: rgba(160, 214, 255, 0.25);
+  --cyan: #63e6ff;
+  --green: #7ef9b9;
+  --pink: #ff74d4;
+  --yellow: #ffd166;
+  --red: #ff5c7a;
+  --text: #eaf6ff;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  font-family: Arial, Helvetica, sans-serif;
+  background: radial-gradient(circle at top, #15274d 0%, var(--bg-1) 35%, #050a17 100%);
+  color: var(--text);
+}
+
+.game-shell {
+  width: min(90vw, 900px);
+  background: var(--panel);
+  border: 1px solid var(--line);
+  border-radius: 18px;
+  padding: 18px 18px 14px;
+  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.35);
+}
+
+.hud {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 12px;
+}
+
+.hud-item {
+  flex: 1;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  padding: 10px 14px;
+  font-size: 0.95rem;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.hud-item strong {
+  color: var(--cyan);
+  font-size: 1.2rem;
+}
+
+canvas {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 12px;
+  border: 1px solid var(--line);
+  background: linear-gradient(180deg, rgba(8, 16, 35, 0.9), rgba(21, 33, 51, 0.92));
+}
+
+.controls {
+  display: flex;
+  justify-content: center;
+  margin-top: 14px;
+}
+
+button {
+  border: none;
+  border-radius: 10px;
+  padding: 10px 22px;
+  font-weight: 700;
+  font-size: 0.95rem;
+  cursor: pointer;
+  background: linear-gradient(135deg, var(--cyan), var(--green));
+  color: #04111c;
+  box-shadow: 0 10px 24px rgba(99, 230, 255, 0.35);
+}
+
+button:hover {
+  filter: brightness(1.05);
+}
